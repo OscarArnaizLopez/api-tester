@@ -10,7 +10,7 @@ export class MainService {
     constructor(private http: Http){}
     
     makeCall(payload){
-        return this.http.post(MainConfig.apiUrl, {"reply": payload});
+        return this.http.post(MainConfig.apiUrl, {"reply": payload, "key": MainConfig.key } );
     
     }
 

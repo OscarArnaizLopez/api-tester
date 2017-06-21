@@ -3,20 +3,11 @@
 
 </ActionBar>
 <StackLayout class="page">
-    <!--<TextView [text]="instructions" class="instruction-txt" editable="false"></TextView>-->
-    <Label [text]="instructions" class="instruction-txt" textWrap="true" editable="false"></Label>
-    <!--<StackLayout orientation="horizontal" class="result-grid" *ngIf="step > 0">
-        <Label [text]="allGood ? 'All good': 'Something went wrong'" class="result-lbl"></Label>
-        <Label text="&#xf058;" class="icon" *ngIf="allGood"></Label>
-        <Label text="&#xf00d;" class="icon" *ngIf="!allGood"></Label>
-    </StackLayout>-->
-    <!--<ListView [items]="items" class="list-group item-list" *ngIf="items.length > 0">
-        <ng-template let-item="item">
-            <Label [text]="item" class="list-group-item"></Label>
-        </ng-template>
-    </ListView>-->
-    <StackLayout orientation="horizontal" class="input-grid">
-        <TextField #inputTxt class="input-txt" hint="Type ref here" autocorrect="false" text="" keyboardType="datetime"></TextField>
-        <Button class="btn" id="button" text="Send!" (tap)="onTap($event)"></Button>
-    </StackLayout>
+    <ScrollView #scrollView class="scrollview-constainer">
+        <Label [text]="instructions" class="instruction-txt" textWrap="true" editable="false"></Label>
+    </ScrollView>
+    <GridLayout class="input-grid" columns="*, 100">
+        <TextField col="0" #inputTxt class="input-txt" hint="Type reply here" autocorrect="false" text="" keyboardType="datetime"></TextField>
+        <Button class="btn" col="1" text="Send!" (tap)="onTap($event)"></Button>
+    </GridLayout>
 </StackLayout>
