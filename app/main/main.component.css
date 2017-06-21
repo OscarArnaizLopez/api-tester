@@ -1,0 +1,44 @@
+.instruction-txt {
+    horizontal-align: center;
+    margin-top: 20;
+    margin-left: 10;
+    margin-right: 10;
+    font-size: 16;
+    color: #585858
+}
+
+.item-list {
+    margin-top: 20;
+    height: 200;
+}
+
+.result-grid {
+    margin-top: 20;
+    horizontal-align: center;
+}
+
+.result-lbl {
+    margin-right: 20;
+}
+
+.input-grid {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.input-txt {
+    width: 70%;
+    margin-left: 10;
+    border-color: #BDBDBD;
+    border-width: 1;
+    height: 50;
+    padding-left: 20;
+}
+
+.btn {
+    width: 30%;
+    padding-right: 10;
+    height: 50;
+    background-color: #045FB4;
+    color: #FFF
+}
